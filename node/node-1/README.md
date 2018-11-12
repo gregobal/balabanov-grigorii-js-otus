@@ -8,16 +8,17 @@
 
 Скрипт request должен отправлять N последовательных или параллельных HTTP запросов к локальному серверу server
 
-#^
+#Description
 
 Запуск сервера:<br>
-node server
+npm start<br>
+(node server)
 
-Запуск скрипта request:<br>
-node request count type
+Запуск теста:<br>
+npm test count type<br>
+(node request count type)
 
 где count - количество запросов, число >= "1",
 type - тип запросов: "a" - параллельный или "c" - последовательный',
 например:<br>
-node request 10 a
-
+npm test 1000 a

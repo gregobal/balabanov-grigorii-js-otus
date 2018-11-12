@@ -8,7 +8,7 @@ const server = http.createServer((req, res) => {
   setTimeout(function() {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/plain');
-    res.end(`Hello World №${req.url.slice(1)}`);
+    res.end(`Hello World N${req.url.slice(1)}`);
   }, 100);
 });
 
