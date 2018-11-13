@@ -1,6 +1,6 @@
 {
   "name": "node-1",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Homework 3 for Otus Modern JavaScript Framework course",
   "main": "request.js",
   "scripts": {
