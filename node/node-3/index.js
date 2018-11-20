@@ -3,9 +3,10 @@ const stream = require('stream');
 class MyReadable extends stream.Readable {
   constructor(options) {
     super(options);
-    console.log('objectMode ',    this._readableState.objectMode);
-    console.log('highWaterMark: ', this._readableState.highWaterMark)
+    console.log('objectMode:', this._readableState.objectMode);
+    console.log('highWaterMark:', this._readableState.highWaterMark)
   }
+
   _read() {
     let randNum = Math.floor(Math.random() * 10);
     this.push(randNum.toString());
