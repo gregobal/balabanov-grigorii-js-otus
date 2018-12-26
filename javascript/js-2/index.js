@@ -23,9 +23,9 @@ customElements.define('my-tree', class extends MyCustomElement {
       myTreeElement = document.createElement('div'),
       items = this.items.items;
 
-
+    this.id = this.items.id;
     shadow.innerHTML = '<style> div {margin-left: 20px} div::before {content: "📁 "} </style>';
-    myTreeElement.textContent = this.items.id;
+    myTreeElement.textContent = this.id;
 
     if (items) {
       items.forEach(item => {
@@ -46,8 +46,9 @@ customElements.define('my-leaf', class extends MyCustomElement {
       shadow = this.shadowRoot,
       meLeafElement = document.createElement('div');
 
+    this.id = this.items.id;
     shadow.innerHTML += '<style> div {margin-left: 25px} div::before {content: "🗎 "} </style>';
-    meLeafElement.textContent = this.items.id;
+    meLeafElement.textContent = this.id;
     shadow.appendChild(meLeafElement);
   }
 });
