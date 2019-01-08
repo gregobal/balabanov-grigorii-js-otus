@@ -8,7 +8,11 @@ class MyCustomElement extends HTMLElement {
   }
 
   get items() {
-    return JSON.parse(this.getAttribute('items'));
+    try {
+      return JSON.parse(this.getAttribute('items'));
+    } catch (e) {
+      return {"id": e}
+    }
   }
 
   set items(value) {
