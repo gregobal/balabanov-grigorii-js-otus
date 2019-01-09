@@ -23,12 +23,10 @@ class App extends Component {
 
     apiService.getData()
       .then(data => {
-        setTimeout(() => {
-          this.setState({
-            isLoading: false,
-            weatherData: data
-          })
-        }, 1000)
+        this.setState({
+          isLoading: false,
+          weatherData: data
+        })
       })
   }
 
@@ -52,13 +50,13 @@ class App extends Component {
 
   onClickFavoriteDelete = value => {
     this.setState(({favorites}) => {
-      const i = favorites.findIndex(item => item === value);
+      const arr = favorites.slice();
+      const i = arr.indexOf(value);
+
+      arr.splice(i, 1);
 
       return {
-        favorites: [
-          ...favorites.slice(0, i),
-          ...favorites.slice(i + 1)
-        ]
+        favorites: arr
       }
     })
   };
