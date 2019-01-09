@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "city": "Moscow",
+    "temp": "-10",
+    "overcast": "cloud-sun",
+    "wind": 3,
+    "humidity": 75
+  },
+  {
+    "id": 2,
+    "city": "Rome",
+    "temp": "+15",
+    "overcast": "sun",
+    "wind": 1,
+    "humidity": 80
+  },
+  {
+    "id": 3,
+    "city": "New York",
+    "temp": "+2",
+    "overcast": "cloud-sun-rain",
+    "wind": 5,
+    "humidity": 90
+  },
+  {
+    "id": 4,
+    "city": "London",
+    "temp": "+9",
+    "overcast": "cloud-showers-heavy",
+    "wind": 7,
+    "humidity": 85
+  }
+]
