@@ -40,7 +40,7 @@
         width: 2.2em;
         height: 2.2em;
         border: 1px solid;
-        border-radius: 2.2em;
+        border-radius: 1.1em;
         text-align: center;
         line-height: 2.2em;
         font-size: 1.5em;

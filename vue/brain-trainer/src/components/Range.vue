@@ -34,7 +34,7 @@
     input[type=range] {
         height: 25px;
         -webkit-appearance: none;
-        margin: 0.4em 0;
+        margin: 0;
         width: 50%;
     }
 
@@ -44,7 +44,7 @@
 
     input[type=range]::-webkit-slider-runnable-track {
         width: 100%;
-        height: 0.3em;
+        height: 4px;
         cursor: pointer;
         animate: 0.2s;
         box-shadow: 0 0 0 #000000;
@@ -71,7 +71,7 @@
 
     input[type=range]::-moz-range-track {
         width: 100%;
-        height: 0.3em;
+        height: 4px;
         cursor: pointer;
         animate: 0.2s;
         box-shadow: 0 0 0 #000000;
@@ -92,7 +92,7 @@
 
     input[type=range]::-ms-track {
         width: 100%;
-        height: 0.3em;
+        height: 4px;
         cursor: pointer;
         animate: 0.2s;
         background: transparent;

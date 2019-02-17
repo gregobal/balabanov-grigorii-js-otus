@@ -50,8 +50,8 @@
         'setOperations',
       ]),
 
-      handleSubmit(event) {
-        const data = new FormData(event.target);
+      handleSubmit(form) {
+        const data = new FormData(form);
 
         const
           time = data.get('time'),
@@ -68,7 +68,9 @@
         this.setLevel({amount: level});
         this.setOperations({amount: operations});
 
-        this.$router.push('/game')
+        if (operations.length > 0) {
+          this.$router.push('/game')
+        }
       }
     }
   }
@@ -77,7 +79,7 @@
 <style scoped>
     .main-page {
         display: inline-block;
-        margin: 3em 1em 2em 2em;
+        margin: 1.5em 1em 2em 2em;
     }
 
     .settings {

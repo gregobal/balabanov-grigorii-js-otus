@@ -27,6 +27,7 @@
 
 <style>
     #app {
+        font-family: "Arial", sans-serif;
         position: relative;
         width: 400px;
         height: 600px;
@@ -49,16 +50,17 @@
     h2 {
         font-weight: 500;
         font-size: 1.2em;
-        margin-bottom: 1em;
+        margin-bottom: 0.3em;
     }
 
     p {
         margin-bottom: 0.1em;
+        line-height: 1.5em;
     }
 
     ul {
         list-style: none;
-        margin-bottom: 2em;
+        margin: 0 0 1.5em 0;
         padding-left: 0;
     }
 

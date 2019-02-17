@@ -1,7 +1,8 @@
 <template>
     <div class="keyboard">
         <div class="key"
-             v-for="keyTitle of keyTitles">
+             v-for="(keyTitle, index) of keyTitles"
+             :key="index">
             <RoundKey :key-title="keyTitle"
                       :disabled="pause"
                       @handleKeyClick="handleKeyClick"/>
@@ -45,5 +46,6 @@
         flex: 0 25%;
         margin-bottom: 2em;
         text-align: center;
+        vertical-align: center;
     }
 </style>

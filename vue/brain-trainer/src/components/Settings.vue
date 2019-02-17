@@ -1,5 +1,5 @@
 <template>
-    <form @submit.prevent="$emit('submit', $event)">
+    <form @submit.prevent="$emit('submit', $event.target)">
         <h2>Настройки</h2>
         <ul>
             <li>
@@ -16,7 +16,7 @@
             </li>
         </ul>
         <ul>
-            <li v-for="(task, index) of tasks" :key="task.id">
+            <li v-for="task of tasks" :key="task.id">
                 <Checkbox :id="task.id"
                           :label-text="task.title"
                           :is-checked="checkOperations.indexOf(task.id) > -1"/>
@@ -77,7 +77,7 @@
 <style scoped>
     button {
         position: absolute;
-        bottom: 2em;
+        bottom: 1.5em;
         right: 2em;
     }
 </style>
