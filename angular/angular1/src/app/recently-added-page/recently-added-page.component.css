@@ -1,0 +1,8 @@
+mat-card-content {
+  max-height: 180px;
+  overflow-y: scroll;
+}
+
+mat-card-footer {
+  text-align: center;
+}
