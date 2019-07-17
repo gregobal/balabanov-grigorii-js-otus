@@ -1,0 +1,60 @@
+{
+  "manufacturers": [
+    {
+      "id": "1",
+      "name": "Apple"
+    },
+    {
+      "id": "2",
+      "name": "Samsung"
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Смартфоны"
+    },
+    {
+      "id": "2",
+      "name": "Планшеты"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "iPhone Xs Max",
+      "description": "Обычный смартфон, можно звонить, можно копать",
+      "manufacturerId": "1",
+      "categoryId": "1"
+    },
+    {
+      "id": "2",
+      "name": "Galaxy S10+",
+      "description": "Целых три камеры!!! а сколько еще нецелых",
+      "manufacturerId": "2",
+      "categoryId": "1"
+    },
+    {
+      "id": "3",
+      "name": "iPad Air 3",
+      "description": "",
+      "manufacturerId": "1",
+      "categoryId": "2"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "Ivan Ivanov",
+      "email": "ivan@mail.com"
+    }
+  ],
+  "orders": [
+    {
+      "id": "1",
+      "userId": "1",
+      "productIds": ["1", "3"],
+      "created": "2019-07-16T13:13:13.000Z"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "name": "node-graphql",
+  "version": "0.1.1",
+  "description": "Homework 6 for lesson10 'GraphQL Server' ",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon -e js,json,graphql",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/810411/balabanov-grigorii-js-otus.git"
+  },
+  "author": "Grigorii Balabanov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/810411/balabanov-grigorii-js-otus/issues"
+  },
+  "homepage": "https://github.com/810411/balabanov-grigorii-js-otus#readme",
+  "dependencies": {
+    "apollo-server": "^2.6.9",
+    "graphql": "^14.4.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
