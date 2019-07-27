@@ -1,0 +1,59 @@
+scalar DateTime
+
+type Query {
+    getProduct(id: ID!): Product!
+    getProducts: [Product!]!
+    getProductsByCategory(categoryId: ID!): [Product!]!
+    getProductsByManufacturer(manufacturerId: ID!): [Product!]!
+
+    getUser(id: ID!): User!
+    getUsers: [User!]!
+}
+
+type Mutation {
+    addProduct(
+        name: String!
+        categoryId: ID!
+        manufacturerId: ID!
+        description: String
+    ): Product!
+
+    addOrder(
+        userId: ID!
+        productIds: [ID!]!
+    ): Order!
+}
+
+type Manufacturer {
+    id: ID!
+    name: String!
+    products: [Product!]!
+}
+
+type Category {
+    id: ID!
+    name: String!
+    products: [Product!]!
+}
+
+type Product {
+    id: ID!
+    name: String!
+    category: Category!
+    manufacturer: Manufacturer!
+    description: String
+}
+
+type User {
+    id: ID!
+    name: String!
+    email: String!
+    orders: [Order!]!
+}
+
+type Order {
+    id: ID!
+    customer: User!
+    products: [Product!]!
+    created: DateTime!
+}
