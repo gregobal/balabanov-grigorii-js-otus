@@ -1,0 +1,16 @@
+{
+  "name": "web-components",
+  "version": "0.0.1",
+  "description": "Custom Elements Tree* Lit-Element",
+  "repository": "https://github.com/810411/balabanov-grigorii-js-otus.git",
+  "main": "index.js",
+  "scripts": {
+    "start": "polymer serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Grigorii Balabanov",
+  "dependencies": {
+    "@webcomponents/webcomponentsjs": "latest",
+    "lit-element": "latest"
+  }
+}

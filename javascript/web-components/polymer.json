@@ -1,0 +1,18 @@
+{
+  "shell": "index.js",
+  "entrypoint": "index.html",
+  "npm": true,
+  "moduleResolution": "node",
+  "sources": ["index.js", "package.json"],
+  "extraDependencies": [
+    "node_modules/@webcomponents/webcomponentsjs/**"
+  ],
+  "builds": [{
+    "bundle": true,
+    "js": {
+      "minify": false,
+      "compile": "es5",
+      "transformModulesToAmd": true
+    }
+  }]
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script
+    src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"
+    defer>
+  </script>
+  <script type="module">
+    window.WebComponents = window.WebComponents || {
+      waitFor(cb){ addEventListener('WebComponentsReady', cb) }
+    };
+    WebComponents.waitFor(async () => {
+      import('./index.js');
+    });
+  </script>
+  <title>Custom Elements Tree* Lit-Element</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8">
+</head>
+<body>
+  <h2> Example from task: </h2>
+  <my-tree-lit-element items='{ "id": 1, "items": [{ "id": 2, "items": [{ "id": 3 }] }] }'></my-tree-lit-element>
+  <h2> One more example: </h2>
+  <my-tree-lit-element id="example"></my-tree-lit-element>
+  <noscript>
+    Could not render the custom element. Check that JavaScript is enabled.
+  </noscript>
+  <script type="text/javascript">
+    const example = {
+      "id": "Node",
+      "items": [
+        {"id": "Text"},
+        {
+          "id": "Element",
+          "items": [
+            {
+              "id": "HTMLElement",
+              "items": [
+                {"id": "HTMLInputElement"},
+                {"id": "HTMLBodyElement"},
+                {"id": "HTMLAnchorElement"},
+                {"id": "...etc"}
+              ]
+            },
+            {"id": "SVGElement"}
+          ]
+        },
+        {"id": "Comment"},
+      ]
+    };
+    document.getElementById('example').setAttribute('items', JSON.stringify(example))
+  </script>
+</body>
