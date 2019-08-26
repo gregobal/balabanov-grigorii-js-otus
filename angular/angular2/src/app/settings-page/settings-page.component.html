@@ -1,0 +1,23 @@
+<mat-card>
+  <mat-card-content>
+    <mat-form-field>
+      <mat-select placeholder="Язык" [(value)]="selectedLanguage">
+        <mat-option *ngFor="let language of languages" [value]="language" >
+          {{language}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-select placeholder="Кол-во слов" [(value)]="selectedLevel">
+        <mat-option *ngFor="let level of levels" [value]="level">
+          {{level}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <p>Язык: {{selectedLanguage}} / Сложность: {{selectedLevel}} слов</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="warn">Сбросить</button>
+    <button mat-raised-button color="primary">Принять</button>
+  </mat-card-actions>
+</mat-card>
