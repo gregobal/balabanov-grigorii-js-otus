@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {from, Observable, of} from 'rxjs';
 import {filter, map, reduce} from 'rxjs/operators';
+import {Word} from "../../app.interfaces";
 
 @Injectable({
   providedIn: 'root'
@@ -12,12 +13,12 @@ export class StorageService {
   constructor() {
   }
 
-  getDictFromStorage(): Array<{ word: string, translate: string }> {
+  getDictFromStorage(): Array<Word> {
     const arr = JSON.parse(this.localStorage.getItem(this.lang));
     return arr instanceof Array ? arr : [];
   }
 
-  addDictItems(dictItems: Array<{ word: string, translate: string }>) {
+  addDictItems(dictItems: Array<Word>) {
     const dict = this.getDictFromStorage();
     from(dictItems)
       .pipe(

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders, HttpResponse} from '@angular/common/http';
 import {Observable, of} from 'rxjs';
 import {map, retry, switchMap} from 'rxjs/operators';
+import {Word} from "../../app.interfaces";
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +18,7 @@ export class TranslateService {
     private http: HttpClient
   ) {}
 
-  getDictItem(word: string): Observable<{word: string, translate: string}> {
+  getDictItem(word: string): Observable<Word> {
     return of(word)
       .pipe(
         switchMap(item => this.http.post(

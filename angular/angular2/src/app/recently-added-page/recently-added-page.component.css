@@ -1,5 +1,5 @@
 mat-card-content:first-child {
-  max-height: 180px;
+  max-height: 99px;
   overflow-y: scroll;
 }
 

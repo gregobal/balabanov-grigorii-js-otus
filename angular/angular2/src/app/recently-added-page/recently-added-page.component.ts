@@ -3,6 +3,7 @@ import {Component, OnInit} from '@angular/core';
 import {TranslateService} from '../services/translate/translate.service';
 import {WordQueueService} from '../services/word-queue/word-queue.service';
 import {StorageService} from '../services/storage/storage.service';
+import {Word} from "../app.interfaces";
 
 @Component({
   selector: 'app-recently-added-page',
@@ -17,12 +18,12 @@ import {StorageService} from '../services/storage/storage.service';
 
 export class RecentlyAddedPageComponent implements OnInit {
 
-  dict: Array<{ word: string, translate: string }>;
+  dict: Array<Word>;
 
   isAdd = false;
   canSave: boolean;
   userInput = '';
-  dictItems: Array<{ word: string, translate: string }> = [];
+  dictItems: Array<Word> = [];
 
   constructor(
     private translateService: TranslateService,
