@@ -18,11 +18,11 @@ import {Word} from "../app.interfaces";
 
 export class RecentlyAddedPageComponent implements OnInit {
 
-  private dict: Array<Word>;
-  private isAdd = false;
-  private canSave: boolean;
-  private userInput = '';
-  private dictItems: Array<Word> = [];
+  dict: Array<Word>;
+  isAdd = false;
+  canSave: boolean;
+  userInput = '';
+  dictItems: Array<Word> = [];
 
   constructor(
     private translateService: TranslateService,
@@ -35,7 +35,7 @@ export class RecentlyAddedPageComponent implements OnInit {
     this.dict = this.storageService.getDictFromStorage();
   }
 
-  private onTranslate(): void {
+  onTranslate(): void {
     this.canSave = false;
     this.wordQueueService.getDictItemsFromInput(this.userInput)
       .subscribe(
@@ -45,7 +45,7 @@ export class RecentlyAddedPageComponent implements OnInit {
       );
   }
 
-  private onSave(): void {
+  onSave(): void {
     this.storageService.addDictItems(this.dictItems);
     this.dictItems = [];
     this.userInput = '';

@@ -10,7 +10,7 @@ import {Language} from "../app.interfaces";
 
 export class SettingsPageComponent implements OnInit {
 
-  private languages: Language[] = [
+  languages: Language[] = [
     {display: 'Английский', value: 'ru-en'},
     {display: 'Немецкий', value: 'ru-de'},
     {display: 'Французкий', value: 'ru-fr'},
@@ -18,7 +18,7 @@ export class SettingsPageComponent implements OnInit {
     {display: 'Испанский', value: 'ru-es'},
   ];
 
-  private levels = [
+  levels = [
     5,
     10,
     20,
@@ -26,8 +26,8 @@ export class SettingsPageComponent implements OnInit {
     100
   ];
 
-  private selectedLang: Language;
-  private selectedLevel: number;
+  selectedLang: Language;
+  selectedLevel: number;
 
   constructor(private storage: StorageService) { }
 
@@ -40,11 +40,11 @@ export class SettingsPageComponent implements OnInit {
     this.selectedLevel = this.storage.getLevel();
   }
 
-  private onChangeLangSelect(eventValue: string) {
+  onChangeLangSelect(eventValue: string) {
     this.selectedLang = this.languages.find(({value}) => value === eventValue)
   }
 
-  private onAgreeClick() {
+  onAgreeClick() {
     this.storage.setLang(this.selectedLang);
     this.storage.setLevel(this.selectedLevel)
   }

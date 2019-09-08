@@ -8,14 +8,14 @@ import {Word} from "../app.interfaces";
   styleUrls: ['./go-page.component.css']
 })
 export class GoPageComponent implements OnInit {
-  private wordList: Word[];
-  private currentWord: Word;
-  private userInput: string;
-  private disableInput: boolean;
-  private turn: number;
-  private result: number;
-  private message: string;
-  private level: number;
+  wordList: Word[];
+  currentWord: Word;
+  userInput: string;
+  disableInput: boolean;
+  turn: number;
+  result: number;
+  message: string;
+  level: number;
 
   constructor(
     private storage: StorageService
@@ -25,7 +25,7 @@ export class GoPageComponent implements OnInit {
     this.setInitState()
   }
 
-  private onNextClick() {
+  onNextClick() {
     this.turn++;
 
     if (this.userInput === this.currentWord.translate) {
@@ -48,7 +48,7 @@ export class GoPageComponent implements OnInit {
     this.message = this.currentWord.word;
   }
 
-  private setInitState() {
+  setInitState() {
     this.turn = 0;
     this.result = 0;
     this.level = this.storage.getLevel();
@@ -58,7 +58,7 @@ export class GoPageComponent implements OnInit {
     this.disableInput = false;
   }
 
-  private getRandomWord() {
+  getRandomWord() {
     const index = Math.floor(Math.random() * this.wordList.length);
     return this.wordList[index]
   }
