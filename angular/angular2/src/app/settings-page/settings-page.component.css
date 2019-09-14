@@ -1,0 +1,7 @@
+button {
+  width: 120px;
+}
+
+mat-form-field:nth-child(odd) {
+  margin-right: 2em;
+}
